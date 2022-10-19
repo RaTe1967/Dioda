@@ -1,16 +1,13 @@
-function nastav_diodu(param: number) {
-    pins.digitalWritePin(DigitalPin.P0, param)
-}
-
-function zhasni_diodu2() {
+function zhasni_diodu () {
     pins.digitalWritePin(DigitalPin.P0, 0)
 }
-
-function rozsvit_diodu() {
+function nastav_diodu (param: number) {
+    pins.digitalWritePin(DigitalPin.P0, param)
+}
+function rozsvit_diodu () {
     pins.digitalWritePin(DigitalPin.P0, 1)
 }
-
-basic.forever(function on_forever() {
+basic.forever(function () {
     pins.digitalWritePin(DigitalPin.P0, 1)
     basic.pause(500)
     pins.digitalWritePin(DigitalPin.P0, 0)
